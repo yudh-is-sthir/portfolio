@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaditya S J — Game QA Tester & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Aaditya Subramanya Bhat S J — Full-Stack Developer with 1+ yr experience transitioning into Game QA. Bengaluru, India. Open to relocating." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-ring" class="cursor-ring"></div>
+  <div class="scanlines"></div>
+
+  <!-- NAV -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span><span class="logo-text">ASJ</span><span class="logo-bracket">]</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about"      class="nav-link">About</a>
+        <a href="#skills"     class="nav-link">Skills</a>
+        <a href="#projects"   class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education"  class="nav-link">Education</a>
+        <a href="#bugreport"  class="nav-link">QA Report</a>
+        <a href="#blog"       class="nav-link">Blog</a>
+        <a href="#contact"    class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#about"      class="nav-mobile-link">About</a>
+      <a href="#skills"     class="nav-mobile-link">Skills</a>
+      <a href="#projects"   class="nav-mobile-link">Projects</a>
+      <a href="#experience" class="nav-mobile-link">Experience</a>
+      <a href="#education"  class="nav-mobile-link">Education</a>
+      <a href="#bugreport"  class="nav-mobile-link">QA Report</a>
+      <a href="#blog"       class="nav-mobile-link">Blog</a>
+      <a href="#contact"    class="nav-mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <canvas id="hero-canvas" class="hero-canvas"></canvas>
+    <div class="hero-hud-corner tl"></div>
+    <div class="hero-hud-corner tr"></div>
+    <div class="hero-hud-corner bl"></div>
+    <div class="hero-hud-corner br"></div>
+    <div class="hero-content">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span class="status-text" id="status-text">INITIALIZING...</span>
+      </div>
+      <div class="hero-glitch-wrap">
+        <h1 class="hero-name glitch" data-text="AADITYA S J">AADITYA S J</h1>
+      </div>
+      <div class="hero-title-wrap">
+        <span class="hero-title-prefix">&gt;_</span>
+        <span class="hero-title-typed" id="typed-title"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-tagline">
+        Full-Stack Developer &rarr; Game QA Tester<br/>
+        <span class="hero-tagline-sub">Bengaluru, India &nbsp;·&nbsp; Open to Relocate Anywhere in India</span>
+      </p>
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn-primary"><span class="btn-inner">View My Work</span><span class="btn-glow"></span></a>
+        <a href="Aaditya_Resume_GameQA_2026.pdf" download class="btn-secondary btn-resume">
+          <span class="resume-dl-icon">&#8659;</span> Download Resume
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span class="scroll-label">SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-num" data-count="1">0</span><span class="stat-label">YR EXP</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-count="800">0</span><span class="stat-label">SCREENS MIGRATED</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-count="5">0</span><span class="stat-label">CHART PLUGINS BUILT</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">&lt;about /&gt;</span>
+        <h2 class="section-title">Who Am I</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal-left">
+          <div class="about-image-frame">
+            <div class="about-avatar">
+              <div class="avatar-ring ring1"></div>
+              <div class="avatar-ring ring2"></div>
+              <div class="avatar-ring ring3"></div>
+              <div class="avatar-initials">ASJ</div>
+            </div>
+            <div class="about-image-hud">
+              <div class="hud-line">ID: <span class="hud-val">AADITYA_SBJ</span></div>
+              <div class="hud-line">ROLE: <span class="hud-val">DEV &rarr; GAME QA</span></div>
+              <div class="hud-line">STATUS: <span class="hud-val hud-green">AVAILABLE</span></div>
+              <div class="hud-line">LOC: <span class="hud-val">Bengaluru, India &#127470;&#127475;</span></div>
+              <div class="hud-line">PHONE: <span class="hud-val">+91 74069 64258</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal-right">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <span class="t-dot red"></span>
+              <span class="t-dot yellow"></span>
+              <span class="t-dot green"></span>
+              <span class="t-title">aaditya@portfolio:~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+              <p class="t-output">Aaditya Subramanya Bhat S J &mdash; Developer, Gamer, QA Enthusiast.</p>
+              <br/>
+              <p><span class="t-prompt">$</span> <span class="t-cmd">cat about.txt</span></p>
+              <p class="t-output">Software developer with 1+ years of production experience<br/>across React, Node.js, Python, and Docker, now pursuing<br/>an entry-level <span class="t-highlight">Game QA / Tester</span> role. Genuine gamer<br/>across mobile, PC, and console platforms.<br/><br/>Brings a builder's instinct for systematic quality checks,<br/>precise bug documentation, and enough technical fluency<br/>to communicate root causes clearly with engineering teams.</p>
+              <br/>
+              <p><span class="t-prompt">$</span> <span class="t-cmd">echo $STRENGTHS</span></p>
+              <p class="t-output">Bug Identification &middot; Root-Cause Analysis<br/>Cross-Platform Testing &middot; Edge-Case Thinking<br/>Clear Technical Documentation &middot; Fast Learner</p>
+              <br/>
+              <p><span class="t-prompt">$</span> <span class="t-cursor-blink">&#9608;</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">&lt;skills /&gt;</span>
+        <h2 class="section-title">Tech Arsenal</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-categories">
+        <div class="skill-category reveal-up">
+          <div class="skill-cat-header"><span class="skill-cat-icon">&#9889;</span><h3>Frontend</h3></div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">React.js</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:85%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">JavaScript / TypeScript</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:82%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">HTML / CSS</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:80%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Babylon.js (3D)</span><span class="skill-pct">65%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:65%"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <div class="skill-cat-header"><span class="skill-cat-icon">&#128295;</span><h3>Backend</h3></div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Node.js</span><span class="skill-pct">82%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:82%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Python</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:75%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">REST APIs</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:80%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">SQL (MySQL / PostgreSQL)</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:70%"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <div class="skill-cat-header"><span class="skill-cat-icon">&#127918;</span><h3>Game QA</h3></div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Bug ID &amp; Root-Cause Analysis</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:75%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Cross-Platform Verification</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:70%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Edge-Case &amp; Systematic Testing</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:72%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Technical Bug Documentation</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:78%"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-category reveal-up">
+          <div class="skill-cat-header"><span class="skill-cat-icon">&#128296;</span><h3>DevOps &amp; Process</h3></div>
+          <div class="skill-items">
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Docker</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:72%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Git / GitHub</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:85%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Agile / Scrum</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:75%"></div></div></div>
+            <div class="skill-item"><div class="skill-info"><span class="skill-name">Apache Superset</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" style="--target:70%"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-badges reveal-up">
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">TypeScript</span>
+        <span class="tech-badge">JavaScript</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">MySQL</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">Git</span>
+        <span class="tech-badge">REST APIs</span>
+        <span class="tech-badge">Babylon.js</span>
+        <span class="tech-badge">Apache Superset</span>
+        <span class="tech-badge highlight">Game QA</span>
+        <span class="tech-badge highlight">Bug Documentation</span>
+        <span class="tech-badge highlight">Edge-Case Testing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">&lt;projects /&gt;</span>
+        <h2 class="section-title">Featured Work</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-filter reveal-up">
+        <button class="filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="fullstack">FULL-STACK</button>
+        <button class="filter-btn" data-filter="frontend">FRONTEND / 3D</button>
+        <button class="filter-btn" data-filter="qa">QA / TESTING</button>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up" data-category="fullstack">
+          <div class="project-card-inner">
+            <div class="project-image">
+              <div class="project-img-placeholder p2">
+                <div class="proj-icon-svg">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <polyline points="3 9 9 9 9 3"/>
+                    <polyline points="21 9 15 9 15 3"/>
+                    <polyline points="3 15 9 15 9 21"/>
+                    <polyline points="21 15 15 15 15 21"/>
+                    <line x1="12" y1="3" x2="12" y2="21"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="proj-link-btn">Live Demo</a>
+                <a href="https://github.com/yudh-is-sthir" target="_blank" rel="noopener" class="proj-link-btn secondary">GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="project-tag">Apache Superset</span><span class="project-tag">Node.js</span><span class="project-tag">JWT</span></div>
+              <h3 class="project-title">Analytics Platform Migration</h3>
+              <p class="project-desc">Led full migration to Apache Superset, reducing report-build time from ~2 developer-days to under 2 hours. Built 5 custom chart plugins from scratch, validated JWT auth across all integration points.</p>
+              <div class="project-footer"><span class="proj-status active">Shipped</span><span class="proj-year">2025</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="fullstack">
+          <div class="project-card-inner">
+            <div class="project-image">
+              <div class="project-img-placeholder p1">
+                <div class="proj-icon-svg">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                    <polyline points="6 8 10 11 6 14"/>
+                    <line x1="14" y1="14" x2="18" y2="14"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="proj-link-btn">Live Demo</a>
+                <a href="https://github.com/yudh-is-sthir" target="_blank" rel="noopener" class="proj-link-btn secondary">GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">REST APIs</span></div>
+              <h3 class="project-title">800+ Screen UI Redesign</h3>
+              <p class="project-desc">Diagnosed navigation &amp; performance defects across 800+ legacy screens, architected a 3-panel React UI, and built a config-driven Node.js rendering adapter that cut per-screen migration from ~3 days to half a day.</p>
+              <div class="project-footer"><span class="proj-status active">Shipped</span><span class="proj-year">2025</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="frontend">
+          <div class="project-card-inner">
+            <div class="project-image">
+              <div class="project-img-placeholder p3">
+                <div class="proj-icon-svg">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="3 9 12 2 21 9 21 20 3 20"/>
+                    <rect x="9" y="14" width="6" height="6"/>
+                    <line x1="12" y1="2" x2="12" y2="9"/>
+                    <circle cx="12" cy="11" r="1" fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="proj-link-btn">Live Demo</a>
+                <a href="https://github.com/yudh-is-sthir" target="_blank" rel="noopener" class="proj-link-btn secondary">GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="project-tag">Babylon.js</span><span class="project-tag">React</span><span class="project-tag">SVG</span></div>
+              <h3 class="project-title">3D Digital Twin — Floor Plan</h3>
+              <p class="project-desc">Browser-based 3D floor-plan generator built with Babylon.js. Converted 20+ uploaded 2D SVG floor plans into interactive 3D models, stress-tested with malformed and edge-case inputs.</p>
+              <div class="project-footer"><span class="proj-status active">Shipped</span><span class="proj-year">2026</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="qa">
+          <div class="project-card-inner">
+            <div class="project-image">
+              <div class="project-img-placeholder p4">
+                <div class="proj-icon-svg">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="6" width="20" height="12" rx="2"/>
+                    <circle cx="8" cy="12" r="2"/>
+                    <line x1="16" y1="10" x2="18" y2="10"/>
+                    <line x1="16" y1="14" x2="18" y2="14"/>
+                    <line x1="17" y1="9" x2="17" y2="15"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a href="Bug_Report_Little_Sheep_Valley_V2.pdf" download class="proj-link-btn">Download Report</a>
+                <a href="#bugreport" class="proj-link-btn secondary">View Details</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="project-tag">Game QA</span><span class="project-tag">Bug Report</span><span class="project-tag">MacOS</span></div>
+              <h3 class="project-title">Bug Report — Little Sheep Valley</h3>
+              <p class="project-desc">Comprehensive bug report for the indie game "Little Sheep Valley" covering animation jitter, UI misalignment, and AI pathing exploits — with severity ratings and reproduction steps.</p>
+              <div class="project-footer"><span class="proj-status learning">QA Sample</span><span class="proj-year">2026</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="fullstack">
+          <div class="project-card-inner">
+            <div class="project-image">
+              <div class="project-img-placeholder p5">
+                <div class="proj-icon-svg">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                    <line x1="12" y1="2" x2="12" y2="22"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="proj-link-btn">Live Demo</a>
+                <a href="https://github.com/yudh-is-sthir" target="_blank" rel="noopener" class="proj-link-btn secondary">GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="project-tag">Node.js</span><span class="project-tag">API Merger</span><span class="project-tag">PostgreSQL</span></div>
+              <h3 class="project-title">API Merger &amp; Data Layer</h3>
+              <p class="project-desc">Built and validated an API merger layer consolidating multiple backend endpoints. Checked data consistency across the merged surface, catching integration gaps before release.</p>
+              <div class="project-footer"><span class="proj-status active">Shipped</span><span class="proj-year">2025</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="frontend">
+          <div class="project-card-inner">
+            <div class="project-image">
+              <div class="project-img-placeholder p6">
+                <div class="proj-icon-svg">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    <circle cx="12" cy="16" r="1" fill="currentColor"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="project-overlay">
+                <a href="#" class="proj-link-btn">Live Demo</a>
+                <a href="https://github.com/yudh-is-sthir" target="_blank" rel="noopener" class="proj-link-btn secondary">GitHub</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags"><span class="project-tag">JWT</span><span class="project-tag">React</span><span class="project-tag">Node.js</span></div>
+              <h3 class="project-title">JWT Auth Integration &amp; Validation</h3>
+              <p class="project-desc">Implemented and validated JWT-based authentication across multiple integration points to catch access and security issues before release. Full end-to-end testing across flows.</p>
+              <div class="project-footer"><span class="proj-status active">Shipped</span><span class="proj-year">2025</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section experience-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">&lt;experience /&gt;</span>
+        <h2 class="section-title">Career Timeline</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026 &mdash; Present</span>
+              <span class="timeline-status active-badge">&#9679; Open to Work</span>
+            </div>
+            <h3 class="timeline-role">Game QA Tester</h3>
+            <span class="timeline-company">&mdash; Actively Seeking Entry-Level Roles</span>
+            <p class="timeline-desc">Transitioning into the gaming industry as a QA Tester. Genuine gamer across mobile, PC, and console platforms. Producing real bug reports (e.g., <em>Little Sheep Valley</em>) with structured reproduction steps, severity ratings, and root-cause notes. Open to relocating anywhere in India.</p>
+            <div class="timeline-tags"><span>Game QA</span><span>Bug Documentation</span><span>Cross-Platform</span><span>Edge-Case Testing</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">Apr 2025 &mdash; Jun 2026</span>
+              <span class="timeline-status">Full-Time</span>
+            </div>
+            <h3 class="timeline-role">Full Stack Software Developer</h3>
+            <span class="timeline-company">&mdash; Digital Blanket Pvt Ltd, Bengaluru</span>
+            <p class="timeline-desc">Worked across three major product tracks: led analytics platform migration to Apache Superset (cutting report-build time by 24&times;), architected a React + Node.js UI system to resolve defects across 800+ legacy screens, and built a browser-based 3D floor-plan generator using Babylon.js.</p>
+            <div class="timeline-tags"><span>React</span><span>Node.js</span><span>Python</span><span>Docker</span><span>Superset</span><span>Babylon.js</span><span>JWT</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section education-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">&lt;education /&gt;</span>
+        <h2 class="section-title">Academic Path</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="education-grid">
+        <div class="edu-card reveal-up">
+          <div class="edu-card-icon">&#127891;</div>
+          <div class="edu-card-body">
+            <h3 class="edu-degree">B.E. Computer Science &amp; Engineering</h3>
+            <span class="edu-field">Bachelor of Engineering</span>
+            <span class="edu-school">M S Ramaiah Institute of Technology, Bangalore</span>
+            <span class="edu-year">Graduated Jun 2025</span>
+            <div class="edu-grade"><span class="grade-label">GPA</span><span class="grade-val">8.7 / 10</span></div>
+          </div>
+        </div>
+        <div class="edu-card reveal-up">
+          <div class="edu-card-icon">&#128220;</div>
+          <div class="edu-card-body">
+            <h3 class="edu-degree">Diploma — CS &amp; Engineering</h3>
+            <span class="edu-field">Computer Science and Engineering</span>
+            <span class="edu-school">Sri Venkateshwara Polytechnic, Bangalore</span>
+            <span class="edu-year">Graduated Apr 2022</span>
+            <div class="edu-grade"><span class="grade-label">Score</span><span class="grade-val">93.72%</span></div>
+          </div>
+        </div>
+        <div class="edu-card reveal-up">
+          <div class="edu-card-icon">&#127918;</div>
+          <div class="edu-card-body">
+            <h3 class="edu-degree">Game QA Self-Study &amp; Practice</h3>
+            <span class="edu-field">Real-world Bug Reports &amp; QA Methodology</span>
+            <span class="edu-school">Self-driven — Portfolio Projects</span>
+            <span class="edu-year">2026 &mdash; Ongoing</span>
+            <div class="edu-grade"><span class="grade-label">STATUS</span><span class="grade-val learning">In Progress</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUG REPORT SECTION -->
+  <section id="bugreport" class="section bugreport-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">&lt;qa-report /&gt;</span>
+        <h2 class="section-title">QA Bug Report</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="bugreport-meta reveal-up">
+        <div class="bugmeta-card">
+          <span class="bugmeta-label">&#127918; GAME</span>
+          <span class="bugmeta-val">Little Sheep Valley</span>
+        </div>
+        <div class="bugmeta-card">
+          <span class="bugmeta-label">&#128197; DATE</span>
+          <span class="bugmeta-val">16 Aug 2026</span>
+        </div>
+        <div class="bugmeta-card">
+          <span class="bugmeta-label">&#128187; PLATFORM</span>
+          <span class="bugmeta-val">macOS</span>
+        </div>
+        <div class="bugmeta-card">
+          <span class="bugmeta-label">&#128030; TOTAL BUGS</span>
+          <span class="bugmeta-val">3 Bugs Found</span>
+        </div>
+        <div class="bugmeta-card severity-high">
+          <span class="bugmeta-label">&#128308; HIGH</span>
+          <span class="bugmeta-val">1</span>
+        </div>
+        <div class="bugmeta-card severity-med">
+          <span class="bugmeta-label">&#128992; MEDIUM</span>
+          <span class="bugmeta-val">1</span>
+        </div>
+        <div class="bugmeta-card severity-low">
+          <span class="bugmeta-label">&#128994; LOW</span>
+          <span class="bugmeta-val">1</span>
+        </div>
+      </div>
+
+      <div class="bugs-grid">
+
+        <div class="bug-card reveal-up" data-severity="high">
+          <div class="bug-card-header">
+            <div class="bug-id-wrap">
+              <span class="bug-hash">#</span><span class="bug-id">01</span>
+            </div>
+            <span class="bug-severity high">HIGH</span>
+          </div>
+          <h3 class="bug-title">Character Animation Jitter</h3>
+          <p class="bug-desc">Walking and sprinting animations for the main character are not smooth — a noticeable jitter effect occurs, becoming more evident during sprinting. Highly visible to players; can break immersion and pull attention from gameplay.</p>
+          <div class="bug-steps">
+            <span class="bug-steps-label">REPRODUCE</span>
+            <ol>
+              <li>Open "The Valley" map (only available map).</li>
+              <li>Start walking/running and focus the camera on the player's front view.</li>
+              <li>Jitter is clearly visible during movement.</li>
+            </ol>
+          </div>
+          <div class="bug-expected">
+            <span class="bug-exp-label">EXPECTED:</span> Smooth, uninterrupted walking and sprinting animation.
+          </div>
+        </div>
+
+        <div class="bug-card reveal-up" data-severity="low">
+          <div class="bug-card-header">
+            <div class="bug-id-wrap">
+              <span class="bug-hash">#</span><span class="bug-id">02</span>
+            </div>
+            <span class="bug-severity low">LOW</span>
+          </div>
+          <h3 class="bug-title">Tutorial UI Circle Misalignment</h3>
+          <p class="bug-desc">The tutorial highlight circle indicating the sheep's needs is positioned slightly above the actual UI area during the tutorial phase. Harmless but may confuse new players learning the care mechanic.</p>
+          <div class="bug-steps">
+            <span class="bug-steps-label">REPRODUCE</span>
+            <ol>
+              <li>Start a new game and proceed to the "New Sheep" unlocking step in the tutorial.</li>
+              <li>Enter caring mode (go near sheep &rarr; press RMB). A red circle misaligns above the sheep needs area.</li>
+              <li>Press E to continue — the "Affection" popup shows the same misalignment.</li>
+            </ol>
+          </div>
+          <div class="bug-expected">
+            <span class="bug-exp-label">EXPECTED:</span> Circle aligned correctly on the sheep needs area and affection hearts.
+          </div>
+        </div>
+
+        <div class="bug-card reveal-up" data-severity="medium">
+          <div class="bug-card-header">
+            <div class="bug-id-wrap">
+              <span class="bug-hash">#</span><span class="bug-id">03</span>
+            </div>
+            <span class="bug-severity medium">MEDIUM</span>
+          </div>
+          <h3 class="bug-title">Sheep AI Trapped by Decorations</h3>
+          <p class="bug-desc">Sheep can be accidentally trapped using fence decorations placed near or inside the Shearing Station. Once trapped, the sheep cannot access food (leading to starvation) and blocks other sheep from entering the station.</p>
+          <div class="bug-steps">
+            <span class="bug-steps-label">REPRODUCE</span>
+            <ol>
+              <li>Wait for a sheep to enter the Shearing Station.</li>
+              <li>Open Build Mode (press B) &rarr; Decorations tab &rarr; place a Simple Fence around the sheep.</li>
+              <li>Sheep is now trapped — no food access, pathing blocked for others.</li>
+            </ol>
+          </div>
+          <div class="bug-expected">
+            <span class="bug-exp-label">EXPECTED:</span> Fence placement restricted near Shearing Stations to preserve sheep pathing.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="bugreport-download reveal-up">
+        <div class="download-card">
+          <div class="dl-icon-wrap">&#128196;</div>
+          <div class="dl-text">
+            <h3>Full Bug Report — Little Sheep Valley V2.0</h3>
+            <p>Includes screenshots, detailed reproduction steps, severity justifications, and expected behaviours.</p>
+          </div>
+          <a href="Bug_Report_Little_Sheep_Valley_V2.pdf" download class="btn-primary dl-btn">
+            <span class="btn-inner">&#8659; Download Report</span>
+            <span class="btn-glow"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="section blog-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">&lt;blog /&gt;</span>
+        <h2 class="section-title">Latest Articles</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card reveal-up">
+          <div class="blog-card-image b1">
+            <div class="blog-card-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="20" height="12" rx="2"/>
+                <circle cx="8" cy="12" r="2"/>
+                <line x1="16" y1="10" x2="18" y2="10"/>
+                <line x1="16" y1="14" x2="18" y2="14"/>
+                <line x1="17" y1="9" x2="17" y2="15"/>
+              </svg>
+            </div>
+            <div class="blog-category">Game QA</div>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-date">Aug 2026</span>
+            <h3 class="blog-title">From Code to QA: My Transition Story</h3>
+            <p class="blog-excerpt">Why I left a full-stack role at Digital Blanket to chase game QA, and what skills transferred better than I expected...</p>
+            <a href="#" class="blog-read-more">Read More &rarr;</a>
+          </div>
+        </div>
+        <div class="blog-card reveal-up">
+          <div class="blog-card-image b2">
+            <div class="blog-card-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="blog-category">Dev</div>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-date">Jun 2025</span>
+            <h3 class="blog-title">Migrating to Apache Superset: Lessons Learned</h3>
+            <p class="blog-excerpt">How we cut report-build time from 2 developer-days to under 2 hours by migrating our analytics stack to Superset...</p>
+            <a href="#" class="blog-read-more">Read More &rarr;</a>
+          </div>
+        </div>
+        <div class="blog-card reveal-up">
+          <div class="blog-card-image b3">
+            <div class="blog-card-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <div class="blog-category">Insight</div>
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-date">Apr 2025</span>
+            <h3 class="blog-title">What Developers Can Learn From Game Testers</h3>
+            <p class="blog-excerpt">The methodical thinking behind great game QA isn't just for testers &mdash; it makes you a sharper developer too...</p>
+            <a href="#" class="blog-read-more">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">&lt;contact /&gt;</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <p class="contact-tagline">Open to Game QA / Tester roles anywhere in India. If you're building games and need a sharp eye on quality, let's talk.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="contact-icon">&#128231;</span>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:aadityabossbhat@gmail.com" class="contact-val">aadityabossbhat@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">&#128222;</span>
+              <div>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+917406964258" class="contact-val">+91 74069 64258</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">&#128188;</span>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://linkedin.com/in/aaditya-s-j-771b99303" target="_blank" rel="noopener" class="contact-val">linkedin.com/in/aaditya-s-j-771b99303</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">&#128025;</span>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/yudh-is-sthir" target="_blank" rel="noopener" class="contact-val">github.com/yudh-is-sthir</a>
+              </div>
+            </div>
+          </div>
+          <div class="availability-badge"><span class="avail-dot"></span>Actively Seeking Game QA Roles &mdash; Open to Relocation</div>
+          <a href="Aaditya_Resume_GameQA_2026.pdf" download class="btn-resume-dl reveal-up">
+            <span>&#8659;</span> Download My Resume
+          </a>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <div class="form-disabled-card">
+            <div class="form-disabled-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <polyline points="2 7 12 13 22 7"/>
+              </svg>
+            </div>
+            <h3 class="form-disabled-title">Drop Me a Direct Message</h3>
+            <p class="form-disabled-desc">The contact form is currently being set up. In the meantime, reach out directly — I respond within 24 hours.</p>
+            <div class="form-disabled-actions">
+              <a href="mailto:aadityabossbhat@gmail.com" class="btn-primary form-direct-btn">
+                <span class="btn-inner">&#9993;&nbsp; Email Me Directly</span>
+                <span class="btn-glow"></span>
+              </a>
+              <a href="https://linkedin.com/in/aaditya-s-j-771b99303" target="_blank" rel="noopener" class="btn-secondary form-direct-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+                Message on LinkedIn
+              </a>
+            </div>
+            <div class="form-disabled-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Actively seeking Game QA roles &mdash; feel free to share opportunities!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-logo">[ASJ]</span>
+        <span class="footer-copy">&copy; 2026 Aaditya Subramanya Bhat S J. All rights reserved.</span>
+      </div>
+      <div class="footer-right">
+        <a href="Aaditya_Resume_GameQA_2026.pdf" download class="footer-resume-link">&#8659; Resume</a>
+        <span class="footer-built">Crafted with &#10084;&#65039; &amp; JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
